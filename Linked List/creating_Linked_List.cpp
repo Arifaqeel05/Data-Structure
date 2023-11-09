@@ -8,6 +8,11 @@ struct Node
 };
 
 Node *head = NULL;
+
+void insert_start()
+{
+    Node *ptr;
+}
 int main()
 {
     int choice;
@@ -15,5 +20,13 @@ int main()
     cout << "Enter your choice: ";
     cin >> choice;
 
-    cout << "You have entered: " << choice << endl;
+    switch (choice)
+    {
+    case 1:
+        insert_start();
+        break;
+
+    default:
+        break;
+    }
 }
