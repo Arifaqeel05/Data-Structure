@@ -1,5 +1,9 @@
 # Data-Structure
 
-Complete Data Structure and Algorithm in C++
+<p>SUBJECT:- DATA STRUCTURE AND ALGORITHMS
+<br>
+Language: C++/C
+
+</p>
 
 <p><strong>Author: Arif Aqeel Ahmad</strong></p>
