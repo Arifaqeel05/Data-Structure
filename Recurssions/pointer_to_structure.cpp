@@ -9,9 +9,9 @@ struct React
 
 int main()
 {
-    React obj;
-    React *ptr;
-    ptr = &obj;
+    React obj;  // Creating object of structure
+    React *ptr; // creating pointer of structure
+    ptr = &obj; // assigning address of object to pointer
 
     ptr->length = 20;
     ptr->breadth = 10;
