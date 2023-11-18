@@ -33,5 +33,39 @@ int main()
         cout << q.array[j] << " ";
     }
     cout << endl;
+again:
+    int choice;
+    cout << "\n1. Insert\n2. Delete\n3. Display\n4. Exit\n";
+    cout << "Enter your choice: ";
+    cin >> choice;
+
+    switch (choice)
+    {
+    case 1:
+        int value;
+        cout << "Enter value to insert: ";
+        cin >> value;
+        q.rear++;
+        q.array[q.rear] = value;
+        break;
+    case 2:
+        q.front++;
+        break;
+    case 3:
+        cout << "\nDisplaying queue: \n";
+        for (int j = q.front; j <= q.rear; j++)
+        {
+            cout << q.array[j] << " ";
+        }
+        cout << endl;
+        break;
+    case 4:
+        exit(0);
+        break;
+    default:
+        cout << "Invalid choice!";
+        break;
+    }
+    goto again;
     return 0;
 }
