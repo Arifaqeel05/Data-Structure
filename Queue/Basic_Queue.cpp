@@ -71,5 +71,6 @@ again:
 
     goto again;
 
+    delete[] q.array;
     return 0;
 }

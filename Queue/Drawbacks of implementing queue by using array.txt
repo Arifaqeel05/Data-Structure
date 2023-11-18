@@ -1,0 +1,4 @@
+------Drawbacks of implementing Queue using Array------
+1)If we delete any elements from queue that we have created by using array,then again we want to insert elements in that recently 
+generated empty spaces, it will not be done.So we can't reuse the spaces of deleted elements.
+2)Use each space one time only.
