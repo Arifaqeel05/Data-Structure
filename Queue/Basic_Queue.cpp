@@ -11,6 +11,7 @@ struct Queue
 
 int main()
 {
+    int chr;
     Queue q;
     cout << "ENTER SIZE: ";
     cin >> q.size;
@@ -62,10 +63,13 @@ again:
     case 4:
         exit(0);
         break;
+
     default:
         cout << "Invalid choice!";
         break;
     }
+
     goto again;
+
     return 0;
 }
