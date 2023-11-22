@@ -2,3 +2,9 @@
 1)If we delete any elements from queue that we have created by using array,then again we want to insert elements in that recently 
 generated empty spaces, it will not be done.So we can't reuse the spaces of deleted elements.
 2)Use each space one time only.
+
+3)Solutions:-
+    -->Resetting the pointers again.If at any time, queue become empty, then rear and front pointer must be 
+    restarted from "0" and"-1"
+    This method does not gaurantee reuse of same space again.
+

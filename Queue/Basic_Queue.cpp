@@ -36,7 +36,7 @@ int main()
     cout << endl;
 again:
     int choice;
-    cout << "\n1. Insert\n2. Delete\n3. Display\n4. Exit\n";
+    cout << "\n1. Enquqe\n2. Dequeue\n3. Display\n4. Exit\n";
     cout << "Enter your choice: ";
     cin >> choice;
 
@@ -44,13 +44,15 @@ again:
     {
     case 1:
         int value;
-        cout << "Enter value to insert: ";
+        cout << "Enter Value to Enqueue: ";
         cin >> value;
         q.rear++;
         q.array[q.rear] = value;
+        cout<<"Value has been enqueued";
         break;
     case 2:
         q.front++;
+        cout<<"Value has been dequeued";
         break;
     case 3:
         cout << "\nDisplaying queue: \n";
