@@ -10,13 +10,16 @@ insert_start *head = NULL, *temp;
 
 void display()
 {
+    int count = 0;
     insert_start *ptr;
     ptr = head;
     while (ptr != NULL)
     {
+        count++;
         cout << ptr->info << " ,";
         ptr = ptr->link;
     }
+    cout << "\nNUMBER OF NODES IN LINKED LIST ARE: " << count << endl;
 }
 
 int main()
