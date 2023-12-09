@@ -39,6 +39,35 @@ void pre_order(Node *root)
         pre_order(root->right);
     }
 }
+
+void in_order(Node *root)
+{
+    if (root == 0)
+    {
+        return;
+    }
+    else
+    {
+        in_order(root->left);
+        cout << root->data << " ";
+        in_order(root->right);
+    }
+}
+
+void post_order(Node *root)
+{
+    if (root == 0)
+    {
+        return;
+    }
+    else
+    {
+        post_order(root->left);
+        post_order(root->right);
+        cout << root->data << " ";
+    }
+}
+
 int main()
 {
     Node *root = NULL; // root is a pointer to the root node
@@ -56,10 +85,12 @@ again:
     case 2:
         pre_order(root);
         break;
-        // case 3: in_order(root);
-        // break;
-    // case 4: post_order(root);
-    // break;
+    case 3:
+        in_order(root);
+        break;
+    case 4:
+        post_order(root);
+        break;
     case 5:
         exit(0);
     default:
