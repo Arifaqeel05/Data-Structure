@@ -9,38 +9,62 @@ struct Node
 };
 Node *create()
 {
-    Node *temp;
     int x;
-    int choice;
-    cout << "ENTER 1 FOR CREATING NODE AND 0 FOR EXITING: ";
-    cin >> choice;
-
-    if (choice == 0)
+    Node *new_node;
+    new_node = new Node;
+    cout << "Enter data (-1 for no node): ";
+    cin >> x;
+    if (x == -1)
     {
         return 0;
     }
+    new_node->data = x;
+    cout << "Enter left child of " << x << ":\n";
+    new_node->left = create();
+    cout << "Enter right child of " << x << ":\n";
+    new_node->right = create();
+    return new_node;
+}
 
+void pre_order(Node *root)
+{
+    if (root == 0)
+    {
+        return;
+    }
     else
     {
-        cout << "ENTER DATA: ";
-        cin >> x;
-
-        temp = new Node();
-
-        temp->data = x;
-
-        cout << "ENTER LEFT CHILD OF " << x << endl;
-        temp->left = create();
-
-        cout << "ENTER RIGHT CHILD OF " << x << endl;
-        temp->right = create();
-
-        return temp;
+        cout << root->data << " ";
+        pre_order(root->left);
+        pre_order(root->right);
     }
 }
 int main()
 {
-    Node *root; // root is a pointer to the root node
-    root = create();
+    Node *root = NULL; // root is a pointer to the root node
+    int choice;
+again:
+    cout << "1. Create a tree\n2. Pre-order traversal\n3. In-order traversal\n4. Post-order traversal\n5. Exit\n";
+
+    cout << "Enter your choice: ";
+    cin >> choice;
+    switch (choice)
+    {
+    case 1:
+        root = create();
+        break;
+    case 2:
+        pre_order(root);
+        break;
+        // case 3: in_order(root);
+        // break;
+    // case 4: post_order(root);
+    // break;
+    case 5:
+        exit(0);
+    default:
+        cout << "Invalid choice\n";
+    }
+    goto again;
     return 0;
 }
